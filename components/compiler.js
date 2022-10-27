@@ -3,36 +3,39 @@ import axios from 'axios'
 
 const Compiler = () => {
   const [language, setLanguage] = useState('py')
-  const [defaultCode, setDefaultCode] = useState('print("Hello World)"')
-  const [code, setCode] = useState(defaultCode)
+  const [code, setCode] = useState('print("Hello World")')
 
-  useEffect(() => {}, [defaultCode])
-
-  const changeLanguage = (e) => {
-    setLanguage(e.target.value)
-
-    if (e.target.value === 'py') {
-      setDefaultCode(`print("Hello World")`)
-    }
-    if (e.target.value === 'cpp') {
-      setDefaultCode(`#include<stdio.h>\nint main(){\n    return 0;\n}`)
-    }
-  }
+  const [output, setOutput] = useState('$')
 
   const submitHandler = async () => {
-    axios.post('http://localhost:5000/post', { language: language, code: code })
+    axios
+      .post('http://localhost:5000/post', { language: language, code: code })
+      .then((res) => setOutput(res.data.output))
+      .catch((err) => setOutput(err.response.data))
+      .catch((err) => console.log(err))
   }
   return (
-    <div>
+    <div className="compiler">
       <div>
-        <select onChange={changeLanguage}>
+        <select onChange={(e) => console.log(e.target.value)}>
           <option value="py">Python</option>
           <option value="cpp">C++</option>
         </select>
       </div>
-
-      <textarea value={defaultCode} onChange={() => {}}></textarea>
-      <button onClick={submitHandler}>Submit</button>
+      <form onSubmit={(e) => e.preventDefault()}>
+        <div>
+          <textarea
+            defaultValue='print("Hello world")'
+            onChange={(e) => setCode(e.target.value)}
+          ></textarea>
+          <textarea
+            // defaultValue="$"
+            value={output}
+            onChange={(e) => {}}
+          ></textarea>
+        </div>
+        <input type="submit" onClick={submitHandler} value="Submit"></input>
+      </form>
     </div>
   )
 }

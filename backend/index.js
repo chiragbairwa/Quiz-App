@@ -17,7 +17,7 @@ app.post('/post', async (req, res) => {
   const { language, code } = req.body
   let output = ''
 
-  if (code === undefined) {
+  if (code === '') {
     return res.status(400).json({ success: false, error: 'Empty Code' })
   }
   // Generate a c++ file with content requested
@@ -34,7 +34,11 @@ app.post('/post', async (req, res) => {
 
     return res.status(200).json({ filepath, output })
   } catch (err) {
-    const stdErr = { err }.err['stderr']
+    let stdErr = { err }.err['stderr']
+    stdErr = stdErr.replace(
+      'C:\\Users\\Asus\\Desktop\\Chirag\\Programming\\Quiz-App\\backend\\codes',
+      'Path',
+    )
 
     res.status(500).json(stdErr)
   }
