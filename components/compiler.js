@@ -16,6 +16,7 @@ const Compiler = () => {
   }
   return (
     <div className="compiler">
+      <h1>Online Compiler</h1>
       <div>
         <select onChange={(e) => console.log(e.target.value)}>
           <option value="py">Python</option>

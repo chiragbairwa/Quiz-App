@@ -1,4 +1,5 @@
 import Head from 'next/head'
+
 import Compiler from '../components/compiler'
 
 export default function Home() {
@@ -10,10 +11,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1>Online Compiler</h1>
-        <Compiler />
-      </main>
+      {/* <Compiler /> */}
+      <h1>heocnnl</h1>
 
       <footer></footer>
     </div>

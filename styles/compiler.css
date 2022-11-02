@@ -8,7 +8,7 @@
   justify-content: center;
 }
 .compiler > form > div > textarea {
-  width: 50vw;
+  width: 40vw;
   height: 30rem;
   resize: none;
 }
