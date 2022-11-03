@@ -3,3 +3,16 @@
   height: 100vh;
   background-color: blue;
 }
+
+.navbar-label{
+  display: flex;
+  align-items: center;
+
+  margin: 0.5rem 0.5rem;
+  border: 1px solid black;
+  border-radius: 4px;
+  height: 3rem;
+}
+.navbar-label > p{
+  margin-left: 0.5rem;
+}

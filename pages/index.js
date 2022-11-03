@@ -1,8 +1,9 @@
-import Head from 'next/head'
-
-import Compiler from '../components/compiler'
+import Head from "next/head";
+import { useRouter } from "next/router";
+import Recent from "../components/recent";
 
 export default function Home() {
+  const router = useRouter();
   return (
     <div>
       <Head>
@@ -11,10 +12,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <Compiler /> */}
-      <h1>heocnnl</h1>
+      <Recent />
 
-      <footer></footer>
+      {/* <footer></footer> */}
     </div>
-  )
+  );
 }
