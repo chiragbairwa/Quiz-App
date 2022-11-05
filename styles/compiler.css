@@ -1,5 +1,7 @@
 .compiler {
   padding: 0 2rem;
+  overflow-y: scroll;
+  height: calc(100vh - 5rem);
 }
 
 .compiler > form > div {

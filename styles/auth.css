@@ -1,0 +1,149 @@
+:root {
+  --second : pink;
+}  
+  /* LOGIN.JS */
+  .login-container {
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    place-content: center;
+    color: black;
+  }
+  
+  .btn {
+    width: 14rem;
+    align-self: center;
+    padding: 1rem 2.5rem;
+  
+    text-align: center;
+    border-radius: 25em;
+    border: none;
+  }
+  .login-form {
+    padding: 16px 24px 24px 24px;
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+  /* glass effect */
+  .login-form {
+    background: rgba(255, 253, 253, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .login-form > p {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  
+  .input-field {
+    height: 3rem;
+    padding: 0 16px;
+    width: 17rem;
+    font-size: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+  
+  .login-register-btn {
+    background-color: white;
+    cursor: pointer;
+    font-size: large;
+  }
+  .login-btn {
+    font-size: large;
+    cursor: pointer;
+    margin: 8px 0 0 0;
+    color: white;
+    background-color: var(--second);
+  }
+  
+  /* REGISTER.JS */
+  .register-container {
+    height: 100vh;
+    width: 100vw;
+    padding: 1rem;
+    color: white;
+    letter-spacing: 0.5px;
+    display: grid;
+    place-items: center;
+  }
+  .register-back-btn {
+    /* font-size: 24px; */
+    /* font-weight: 600; */
+    font-size: large;
+
+    cursor: pointer;
+  }
+  
+  .register-form {
+    padding: 16px 24px 24px 24px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: rgba(255, 253, 253, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  .register-form > p {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+  }
+  .register-form > input {
+    width: 17rem;
+  }
+  .register-btn {
+    cursor: pointer;
+    width: 14rem;
+    margin: 8px 0 0 0;
+    color: white;
+    background-color: var(--second);
+  }
+/*   
+  @media screen and (min-width: 480px) {
+    .login-container {
+      display: grid;
+      place-items: center;
+      grid-template-columns: 50% 50%;
+    }
+    .login-form {
+      margin-left: -16px;
+      margin-top: -4px;
+    }
+  
+    .register-form {
+      margin: 0;
+    }
+    .register-back-btn {
+      position: absolute;
+      top: 30px;
+      left: 50px;
+    }
+    .register-back-btn::after {
+      content: 'Sign In';
+      margin-left: 10px;
+      font-size: medium;
+    }
+    .register-container > div > h2 {
+      font-size: 40px;
+    }
+    .register-container > div > p {
+      font-size: 24px;
+    }
+  }
+   */
